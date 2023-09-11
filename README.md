@@ -49,8 +49,7 @@ Don't just tell the reader what went wrong or was challenging!  Describe how you
 
 The goal of the assignment was to control a servo motor using 2 buttons. The code was made in CircuitPython. First I wired a servo and got it working with a loop code. Then I wired 2 buttons and got them to talk to the Serial Moniter. Then I combined the 2 codes and added a couple things from online libraries. 
 
-
-  Your description is the right place to draw the reader's attention to any important chunks of code. Here's how you make code look like code:
+  Here is the code     
 
 ```python
 # SPDX-FileCopyrightText: 2021 ladyada for Adafruit Industries

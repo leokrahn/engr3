@@ -1,34 +1,210 @@
-# CPyProjectTemplate
-Put a description for your project here!
-This repo is a template VS code project for CircuitPython projects that automatically uploads your code to the board when you press F5. Requires F5Anything extension.
-## What does this do?
-This makes it easirt to develop for boards like 
-## Use
-### Every new project:
-1. Make a GitHub account if you don't have one with your normal school credentials and sign into it.
-2. Click the big green Use This Template button at the top of this page.
-3. Name the new repository something appropriate to the purpose of your project (Your first one should probably be named `Engr3`).
-4. Hit "Create repository from template." (The default settings should be fine.)
-5. Open VS Code on your machine. Click Clone Repository. If it doesn't show up, hit Ctrl+Shift+P and then type Clone, then hit Enter.
-6. Paste in the link to the new repository you've just created from the template and hit enter.
-7. For the location, Documents folder.
-8. Hit "Open Cloned Directory" in the bottom-left corner.
-9. Install the reccomended extensions when you get that popup in the lower right corner. IF the pop-up dissapears before you can click it, hit the tiny bell icon in the lower left corner to bring it back.
-### To commit from VS Code:
-1. Go to the little branch icon in the left bar of VS Code.
-2. Click the + icon next to the files you want to commit.
-3. Write a message that descibes your changes in the "Message" box and hit commit.
-4. If you get an error about user.name and user.email, see the next section.
-5. Click the "Sync changes" button.
-### If you get an error about user.name and user.email
-1. In VS Code, hit `` Ctrl+Shift+` ``
-2. Filling in your actual information, run the following commands one line at a time. The paste shortcut is `Ctrl+V` or you can right click then hit paste. Spelling must match exactly:
+# CircuitPython
+This repository will actually serve as an aid to help you get started with your own template.  You should copy the raw form of this readme into your own, and use this template to write your own.  If you want to draw inspiration from other classmates, feel free to check [this directory of all students!](https://github.com/chssigma/Class_Accounts).
+## Table of Contents
+* [Table of Contents](#TableOfContents)
+* [Hello_CircuitPython](#Hello_CircuitPython)
+* [CircuitPython_Servo](#CircuitPython_Servo)
+* [CircuitPython_LCD](#CircuitPython_LCD)
+* [NextAssignmentGoesHere](#NextAssignment)
+---
+
+## Hello_CircuitPython
+
+### Description & Code Snippets
+Write a couple sentences here, describing this assignment, and make sure that you hit these two points:
+* What was the goal of the assignment?
+* How did you accomplish that goal?
+  How you accomplished the goal is NOT a reflection, it is you telling the reader how to do this assignment, in broad strokes.
+
+  Your description is the right place to draw the reader's attention to any important chunks of code. Here's how you make code look like code:
+
+```python
+Code goes here
+
 ```
-git config --global user.name YOURGITHUBUSERNAME
-git config --global user.email YOURSCHOOLEMAIL
+
+**Lastly, please end this section with a link to your code or file.**  
+
+### Evidence
+Pictures / Gifs of your finished work should go here.  You need to communicate what your thing does.
+For making a GIF, I recommend [ezgif.com](https://www.ezgif.com) Remember you can insert pictures using Markdown or HTML to insert an image.
+
+![spinningMetro_Optimized](https://user-images.githubusercontent.com/54641488/192549584-18285130-2e3b-4631-8005-0792c2942f73.gif)
+
+
+And here is how you should give image credit to someone if you use their work:
+
+Image credit goes to [Rick A](https://www.youtube.com/watch?v=dQw4w9WgXcQ&scrlybrkr=8931d0bc)
+
+
+
+### Wiring
+Make an account with your Google ID at [tinkercad.com](https://www.tinkercad.com/learn/circuits), and use "TinkerCad Circuits to make a wiring diagram."  It's really easy!  
+Then post an image here.   [here's a quick tutorial for all markdown code, like making links](https://guides.github.com/features/mastering-markdown/)
+
+### Reflection
+Don't just tell the reader what went wrong or was challenging!  Describe how you figured it out, share the things that helped you succeed (tutorials, other people's repos, etc.), and then share what you learned from that experience.  **Your underlying goal for the reflection, is to concisely pass on the RIGHT knowledge that will help the reader recreate this assignment better or more easily.  Pass on your wisdom!**
+
+
+
+## CircuitPython_Servo
+
+The goal of the assignment was to control a servo motor using 2 buttons. The code was made in CircuitPython. First I wired a servo and got it working with a loop code. Then I wired 2 buttons and got them to talk to the Serial Moniter. Then I combined the 2 codes and added a couple things from online libraries. 
+
+
+  Your description is the right place to draw the reader's attention to any important chunks of code. Here's how you make code look like code:
+
+```python
+# SPDX-FileCopyrightText: 2021 ladyada for Adafruit Industries
+# SPDX-License-Identifier: MIT
+
+import time
+import board
+import pwmio
+from adafruit_motor import servo
+from digitalio import DigitalInOut, Direction, Pull
+
+# create a PWMOut object on the control pin.
+pwm = pwmio.PWMOut(board.D5, duty_cycle=0, frequency=50)
+
+btn = DigitalInOut(board.D8)
+btn.direction = Direction.INPUT
+btn.pull = Pull.DOWN
+
+btn2 = DigitalInOut(board.D9)
+btn2.direction = Direction.INPUT
+btn2.pull = Pull.DOWN
+
+# To get the full range of the servo you will likely need to adjust the min_pulse and max_pulse to
+# match the stall points of the servo.
+# This is an example for the Sub-micro servo: https://www.adafruit.com/product/2201
+# servo = servo.Servo(pwm, min_pulse=580, max_pulse=2350)
+# This is an example for the Micro Servo - High Powered, High Torque Metal Gear:
+#   https://www.adafruit.com/product/2307
+# servo = servo.Servo(pwm, min_pulse=500, max_pulse=2600)
+# This is an example for the Standard servo - TowerPro SG-5010 - 5010:
+#   https://www.adafruit.com/product/155
+# servo = servo.Servo(pwm, min_pulse=400, max_pulse=2400)
+# This is an example for the Analog Feedback Servo: https://www.adafruit.com/product/1404
+# servo = servo.Servo(pwm, min_pulse=600, max_pulse=2500)
+# This is an example for the Micro servo - TowerPro SG-92R: https://www.adafruit.com/product/169
+# servo = servo.Servo(pwm, min_pulse=500, max_pulse=2400)
+
+# The pulse range is 750 - 2250 by default. This range typically gives 135 degrees of
+# range, but the default is to use 180 degrees. You can specify the expected range if you wish:
+# servo = servo.Servo(board.D5, actuation_range=135)
+servo = servo.Servo(pwm)
+angle = 90
+
+# We sleep in the loops to give the servo time to move into position.
+while True:
+    if btn.value:
+        angle = angle + 1
+        if angle > 180:
+            angle = 180
+        print(angle)
+        servo.angle = angle
+        time.sleep(0.01)
+        
+    if btn2.value:
+        angle = angle - 1
+        if angle < 0:
+            angle = 0
+        print(angle)
+        servo.angle = angle
+        time.sleep(0.01)
+
 ```
-3. Return to the previous section.
-### To install a library:
-1. Get the library files from the Adafruit bundle (probably a .mpy file or a folder.)
-2. Copy them to the lib folder *in your project's folder, usually in Documents.* **Don't copy to the lib folder on the board! It will not work!**
-3. Hit F5 and the library will be uplaoded to the board.
+
+**Lastly, please end this section with a link to your code or file.**  
+
+
+### Evidence
+Pictures / Gifs of your finished work should go here.  You need to communicate what your thing does.
+For making a GIF, I recommend [ezgif.com](https://www.ezgif.com) Remember you can insert pictures using Markdown or HTML to insert an image.
+
+
+
+Here is how you should give image credit to someone if you use their work:
+
+Image credit goes to [Rick A](https://www.youtube.com/watch?v=dQw4w9WgXcQ&scrlybrkr=8931d0bc)
+
+
+
+### Wiring
+[tinkercad.com](https://www.tinkercad.com/learn/circuits).  If you can't find the particular part you need, get creative, and just drop a note into the circuit diagram, explaining.
+For example, I use an Arduino Uno to represent my Circuitpython device but write a note saying which board I'm actually using.
+Then post an image here.   [Here's a quick tutorial for all markdown code, like making links](https://guides.github.com/features/mastering-markdown/)
+
+### Reflection
+Don't just tell the reader what went wrong or was challenging!  Describe how you figured it out, share the things that helped you succeed (tutorials, other people's repos, etc.), and then share what you learned from that experience.  **Your underlying goal for the reflection, is to concisely pass on the RIGHT knowledge that will help the reader recreate this assignment better or more easily.  Pass on your wisdom!**
+
+
+## CircuitPython_LCD
+
+### Description & Code Snippets
+Write a couple sentences here, describing this assignment, and make sure that you hit these two points:
+* What was the goal of the assignment?
+* How did you accomplish that goal?
+  How you accomplished the goal is NOT a reflection, it is you telling the reader how to do this assignment, in broad strokes.
+
+  Your description is the right place to draw the reader's attention to any important chunks of code. Here's how you make code look like code:
+
+```python
+Code goes here
+
+```
+
+**Lastly, please end this section with a link to your code or file.**  
+
+
+### Evidence
+Pictures / Gifs of your finished work should go here.  You need to communicate what your thing does.
+For making a GIF, I recommend [ezgif.com](https://www.ezgif.com) Remember you can insert pictures using Markdown or HTML to insert an image.
+
+
+And here is how you should give image credit to someone if you use their work:
+
+Image credit goes to [Rick A](https://www.youtube.com/watch?v=dQw4w9WgXcQ&scrlybrkr=8931d0bc)
+
+
+
+### Wiring
+[tinkercad.com](https://www.tinkercad.com/learn/circuits).  If you can't find the particular part you need, get creative, and just drop a note into the circuit diagram, explaining.
+For example, I use an Arduino Uno to represent my Circuitpython device but write a note saying which board I'm actually using.
+Then post an image here.   [Here's a quick tutorial for all markdown code, like making links](https://guides.github.com/features/mastering-markdown/)
+
+
+### Reflection
+Don't just tell the reader what went wrong or was challenging!  Describe how you figured it out, share the things that helped you succeed (tutorials, other people's repos, etc.), and then share what you learned from that experience.  **Your underlying goal for the reflection, is to concisely pass on the RIGHT knowledge that will help the reader recreate this assignment better or more easily.  Pass on your wisdom!**
+
+
+
+
+
+## NextAssignment
+
+### Description & Code Snippets
+Write a couple sentences here, describing this assignment, and make sure that you hit these two points:
+* What was the goal of the assignment?
+* How did you accomplish that goal?
+  How you accomplished the goal is NOT a reflection, it is you telling the reader how to do this assignment, in broad strokes.
+
+  Your description is the right place to draw the reader's attention to any important chunks of code. Here's how you make code look like code:
+
+```python
+Code goes here
+
+```
+
+**Lastly, please end this section with a link to your code or file.**  
+
+### Evidence
+
+### Wiring
+[tinkercad.com](https://www.tinkercad.com/learn/circuits).  If you can't find the particular part you need, get creative, and just drop a note into the circuit diagram, explaining.
+For example, I use an Arduino Uno to represent my Circuitpython device but write a note saying which board I'm actually using.
+Then post an image here.   [Here's a quick tutorial for all markdown code, like making links](https://guides.github.com/features/mastering-markdown/)
+### Reflection
+Don't just tell the reader what went wrong or was challenging!  Describe how you figured it out, share the things that helped you succeed (tutorials, other people's repos, etc.), and then share what you learned from that experience.  **Your underlying goal for the reflection, is to concisely pass on the RIGHT knowledge that will help the reader recreate this assignment better or more easily.  Pass on your wisdom!**
+

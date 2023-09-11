@@ -23,11 +23,7 @@ Code goes here
 
 ```
 
-**Link to my code**  
-	[title](https://github.com/leokrahn/engr3/blob/main/servo.py)
-### Evidence
 
-[gifcompressor.zip](https://github.com/leokrahn/engr3/files/12579808/gifcompressor.zip)
 
 
 And here is how you should give image credit to someone if you use their work:
@@ -113,21 +109,11 @@ while True:
 
 ```
 
-**Lastly, please end this section with a link to your code or file.**  
-
-
+**Link to my code**  
+	[title](https://github.com/leokrahn/engr3/blob/main/servo.py)
 ### Evidence
-Pictures / Gifs of your finished work should go here.  You need to communicate what your thing does.
-For making a GIF, I recommend [ezgif.com](https://www.ezgif.com) Remember you can insert pictures using Markdown or HTML to insert an image.
 
-
-
-Here is how you should give image credit to someone if you use their work:
-
-Image credit goes to [Rick A](https://www.youtube.com/watch?v=dQw4w9WgXcQ&scrlybrkr=8931d0bc)
-
-
-
+[gifcompressor.zip](https://github.com/leokrahn/engr3/files/12579808/gifcompressor.zip)
 ### Wiring
 [tinkercad.com](https://www.tinkercad.com/learn/circuits).  If you can't find the particular part you need, get creative, and just drop a note into the circuit diagram, explaining.
 For example, I use an Arduino Uno to represent my Circuitpython device but write a note saying which board I'm actually using.

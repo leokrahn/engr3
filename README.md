@@ -110,7 +110,7 @@ while True:
 ```
 
 **Link to my code**  
-	[title](https://github.com/leokrahn/engr3/blob/main/servo.py)
+	[Servo Code](https://github.com/leokrahn/engr3/blob/main/servo.py)
 ### Evidence
 
 [gifcompressor.zip](https://github.com/leokrahn/engr3/files/12579808/gifcompressor.zip)

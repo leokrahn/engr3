@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: MIT
 
 import time
-import board
+import board   
 import pwmio
 from adafruit_motor import servo
 from digitalio import DigitalInOut, Direction, Pull

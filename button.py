@@ -2,7 +2,7 @@ import time
 import board
 from digitalio import DigitalInOut, Direction, Pull
 
-btn = DigitalInOut(board.SWITCH)
+btn = DigitalInOut(board.D13)
 btn.direction = Direction.INPUT
 btn.pull = Pull.UP
 

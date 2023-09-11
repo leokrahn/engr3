@@ -23,18 +23,16 @@ Code goes here
 
 ```
 
-**Lastly, please end this section with a link to your code or file.**  
-
+**Link to my code**  
+	[title](https://github.com/leokrahn/engr3/blob/main/servo.py)
 ### Evidence
-Pictures / Gifs of your finished work should go here.  You need to communicate what your thing does.
-For making a GIF, I recommend [ezgif.com](https://www.ezgif.com) Remember you can insert pictures using Markdown or HTML to insert an image.
 
-![spinningMetro_Optimized](https://user-images.githubusercontent.com/54641488/192549584-18285130-2e3b-4631-8005-0792c2942f73.gif)
+[gifcompressor.zip](https://github.com/leokrahn/engr3/files/12579808/gifcompressor.zip)
 
 
 And here is how you should give image credit to someone if you use their work:
 
-Image credit goes to [Rick A](https://www.youtube.com/watch?v=dQw4w9WgXcQ&scrlybrkr=8931d0bc)
+Image credit goes to [me]
 
 
 

@@ -28,6 +28,9 @@ Code goes here
 
 And here is how you should give image credit to someone if you use their work:
 
+![ezgif-5-a997dfd67c-min](https://github.com/leokrahn/engr3/assets/143544783/7010ea8c-76ee-4462-a460-b1fbd6a6f69b)
+
+
 Image credit goes to [me]
 
 

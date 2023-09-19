@@ -28,10 +28,7 @@ Code goes here
 
 And here is how you should give image credit to someone if you use their work:
 
-![ezgif-5-a997dfd67c-min](https://github.com/leokrahn/engr3/assets/143544783/7010ea8c-76ee-4462-a460-b1fbd6a6f69b)
 
-
-Image credit goes to [me]
 
 
 
@@ -115,8 +112,11 @@ while True:
 **Link to my code**  
 	[Servo Code](https://github.com/leokrahn/engr3/blob/main/servo.py)
 ### Evidence
+![ezgif-5-a997dfd67c-min](https://github.com/leokrahn/engr3/assets/143544783/7010ea8c-76ee-4462-a460-b1fbd6a6f69b)
 
-[gifcompressor.zip](https://github.com/leokrahn/engr3/files/12579808/gifcompressor.zip)
+
+Image credit goes to [me]
+
 ### Wiring
 [tinkercad.com](https://www.tinkercad.com/learn/circuits).  If you can't find the particular part you need, get creative, and just drop a note into the circuit diagram, explaining.
 For example, I use an Arduino Uno to represent my Circuitpython device but write a note saying which board I'm actually using.

@@ -113,8 +113,6 @@ while True:
 	[Servo Code](https://github.com/leokrahn/engr3/blob/main/servo.py)
 ### Evidence
 ![ezgif-5-a997dfd67c-min](https://github.com/leokrahn/engr3/assets/143544783/7010ea8c-76ee-4462-a460-b1fbd6a6f69b)
-
-
 Image credit goes to [me]
 
 ### Wiring

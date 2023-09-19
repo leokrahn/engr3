@@ -119,7 +119,8 @@ Image credit goes to [me]
 
 ### Wiring
 Note: I'm using a metro m0 with a shield, not an arduino with a breadboard
-![Screenshot (1)](https://github.com/leokrahn/engr3/assets/143544783/945ffee6-f16c-4dd0-a0f4-7d3b59582918)
+![Screenshot (1)](https://github.com/leokrahn/engr3/assets/143544783/856c88c2-909a-416e-94f3-243e35c7023c)
+
 ### Reflection
 
 Don't just tell the reader what went wrong or was challenging!  Describe how you figured it out, share the things that helped you succeed (tutorials, other people's repos, etc.), and then share what you learned from that experience.  **Your underlying goal for the reflection, is to concisely pass on the RIGHT knowledge that will help the reader recreate this assignment better or more easily.  Pass on your wisdom!**

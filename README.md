@@ -23,18 +23,12 @@ Code goes here
 
 ```
 
-**Lastly, please end this section with a link to your code or file.**  
 
-### Evidence
-Pictures / Gifs of your finished work should go here.  You need to communicate what your thing does.
-For making a GIF, I recommend [ezgif.com](https://www.ezgif.com) Remember you can insert pictures using Markdown or HTML to insert an image.
-
-![spinningMetro_Optimized](https://user-images.githubusercontent.com/54641488/192549584-18285130-2e3b-4631-8005-0792c2942f73.gif)
 
 
 And here is how you should give image credit to someone if you use their work:
 
-Image credit goes to [Rick A](https://www.youtube.com/watch?v=dQw4w9WgXcQ&scrlybrkr=8931d0bc)
+
 
 
 
@@ -51,8 +45,7 @@ Don't just tell the reader what went wrong or was challenging!  Describe how you
 
 The goal of the assignment was to control a servo motor using 2 buttons. The code was made in CircuitPython. First I wired a servo and got it working with a loop code. Then I wired 2 buttons and got them to talk to the Serial Moniter. Then I combined the 2 codes and added a couple things from online libraries. 
 
-
-  Your description is the right place to draw the reader's attention to any important chunks of code. Here's how you make code look like code:
+  Here is the code     
 
 ```python
 # SPDX-FileCopyrightText: 2021 ladyada for Adafruit Industries
@@ -116,27 +109,18 @@ while True:
 
 ```
 
-**Lastly, please end this section with a link to your code or file.**  
-
-
+**Link to my code**  
+	[Servo Code](https://github.com/leokrahn/engr3/blob/main/servo.py)
 ### Evidence
-Pictures / Gifs of your finished work should go here.  You need to communicate what your thing does.
-For making a GIF, I recommend [ezgif.com](https://www.ezgif.com) Remember you can insert pictures using Markdown or HTML to insert an image.
-
-
-
-Here is how you should give image credit to someone if you use their work:
-
-Image credit goes to [Rick A](https://www.youtube.com/watch?v=dQw4w9WgXcQ&scrlybrkr=8931d0bc)
-
-
+![ezgif-5-a997dfd67c-min](https://github.com/leokrahn/engr3/assets/143544783/7010ea8c-76ee-4462-a460-b1fbd6a6f69b)
+Image credit goes to [me]
 
 ### Wiring
-[tinkercad.com](https://www.tinkercad.com/learn/circuits).  If you can't find the particular part you need, get creative, and just drop a note into the circuit diagram, explaining.
-For example, I use an Arduino Uno to represent my Circuitpython device but write a note saying which board I'm actually using.
-Then post an image here.   [Here's a quick tutorial for all markdown code, like making links](https://guides.github.com/features/mastering-markdown/)
+Note: I'm using a metro m0 with a shield, not an arduino with a breadboard
+![Screenshot (1)](https://github.com/leokrahn/engr3/assets/143544783/856c88c2-909a-416e-94f3-243e35c7023c)
 
 ### Reflection
+
 Don't just tell the reader what went wrong or was challenging!  Describe how you figured it out, share the things that helped you succeed (tutorials, other people's repos, etc.), and then share what you learned from that experience.  **Your underlying goal for the reflection, is to concisely pass on the RIGHT knowledge that will help the reader recreate this assignment better or more easily.  Pass on your wisdom!**
 
 

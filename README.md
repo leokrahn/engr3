@@ -166,29 +166,48 @@ Don't just tell the reader what went wrong or was challenging!  Describe how you
 
 
 
-## NextAssignment
+## Motor Control
 
 ### Description & Code Snippets
-Write a couple sentences here, describing this assignment, and make sure that you hit these two points:
-* What was the goal of the assignment?
-* How did you accomplish that goal?
-  How you accomplished the goal is NOT a reflection, it is you telling the reader how to do this assignment, in broad strokes.
-
-  Your description is the right place to draw the reader's attention to any important chunks of code. Here's how you make code look like code:
+The goal of the assignment was to wire a motor using a 6V battery pack, a transistor, and a potentiometer. and to write code to make the motor speed up or slow down using the potentiometer. I started by wiring the whole thing using the diagram on the assignment page but not putting in the batteries. Then I wrote code to get a value from the potentiometer. After getting that working I added code to convert the potentiometer values to motor values based on the pwmio module.
 
 ```python
-Code goes here
+# SPDX-FileCopyrightText: 2018 Anne Barela for Adafruit Industries
+#
+# SPDX-License-Identifier: MIT
+
+import time
+import board
+from analogio import AnalogIn
+import time
+import pwmio
+import board
+
+pwm = pwmio.PWMOut(board.D3)
+
+
+potentiometer = AnalogIn(board.A0)  # potentiometer connected to A1, power & ground
+
+while True:
+
+    print((potentiometer.value,))      # Display value
+
+    time.sleep(0.25)                   # Wait a bit before checking all again
+    
+    pwm.duty_cycle = potentiometer.value
+    time.sleep(0.1)
 
 ```
 
-**Lastly, please end this section with a link to your code or file.**  
+[***Link to my code***](https://github.com/leokrahn/engr3/blob/main/potentiometer.py)
 
 ### Evidence
+![ezgif-5-a8eef860d4](https://github.com/leokrahn/engr3/assets/143544783/69f277ca-2558-4a82-9023-e6456f96561b)
+Image credit goes to me
 
 ### Wiring
-[tinkercad.com](https://www.tinkercad.com/learn/circuits).  If you can't find the particular part you need, get creative, and just drop a note into the circuit diagram, explaining.
-For example, I use an Arduino Uno to represent my Circuitpython device but write a note saying which board I'm actually using.
-Then post an image here.   [Here's a quick tutorial for all markdown code, like making links](https://guides.github.com/features/mastering-markdown/)
-### Reflection
-Don't just tell the reader what went wrong or was challenging!  Describe how you figured it out, share the things that helped you succeed (tutorials, other people's repos, etc.), and then share what you learned from that experience.  **Your underlying goal for the reflection, is to concisely pass on the RIGHT knowledge that will help the reader recreate this assignment better or more easily.  Pass on your wisdom!**
+![Screenshot (4)](https://github.com/leokrahn/engr3/assets/143544783/2a833573-6b55-4e00-b676-60410cb17657)
 
+### Reflection
+
+The wiring part of the assignment was pretty easy, josh showed me how to wire the potentiometer and I got the rest from the assignment page. Getting the code for the potentiometer was easy as well, I just looked up a code for a potentiometer and it worked. Converting the potentiometer values to motor values was the hardest part as a spent too long trying to use different functions that wouldn't work here. Eventually Mr. Dirov showed me the pwmio module and I filled in the rest pretty fast. The last part was that after all that the motor wasn't working, so I got a new battery pack and it worked

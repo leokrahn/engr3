@@ -260,24 +260,28 @@ Image credit goes to me
 
 The wiring part of the assignment was pretty easy, josh showed me how to wire the potentiometer and I got the rest from the assignment page. Getting the code for the potentiometer was easy as well, I just looked up a code for a potentiometer and it worked. Converting the potentiometer values to motor values was the hardest part as a spent too long trying to use different functions that wouldn't work here. Eventually Mr. Dirov showed me the pwmio module and I filled in the rest pretty fast. The last part was that after all that the motor wasn't working, so I got a new battery pack and it worked
 
-## Onshape_Assignment_Template
+## Hanger
 
 ### Assignment Description
 
-Write your assignment description here. What is the purpose of this assignment? It should be at least a few sentences.
+The goal of the assignment was to design the hanger in onshape from the drawing. It's practice for the certification test. 
 
 ### Evidence
 
 Take several cropped screenshots of your Onshape document from different angles. Try to capture all important aspects of the design. Turn off overlays that obscure the parts, such as planes or mate connectors. Your images should have captions, so the reader knows what they are looking at!  
+![Screenshot (9)](https://github.com/leokrahn/engr3/assets/143544783/0ee413c6-9b3d-4db5-ab07-4aa2165a8db5)
+![Screenshot (8)](https://github.com/leokrahn/engr3/assets/143544783/32879ec6-2d21-4ef2-a492-259ffe92332e)
+![Screenshot (7)](https://github.com/leokrahn/engr3/assets/143544783/270c770e-ed00-4abb-8283-2ddec89e2f12)
+![Screenshot (6)](https://github.com/leokrahn/engr3/assets/143544783/df5910ab-1dae-47fc-ac3f-2be0a41b3353)
 
 ### Part Link 
 
-[Create a link to your Onshape document](https://cvilleschools.onshape.com/documents/003e413cee57f7ccccaa15c2/w/ea71050bb283bf3bf088c96c/e/c85ae532263d3b551e1795d0?renderMode=0&uiState=62d9b9d7883c4f335ec42021). Don't forget to turn on link sharing in your Onshape document so that others can see it. 
 
+](https://cvilleschools.onshape.com/documents/00ecd1636b105a177daf0a85/w/ff0b1cdb7f029664d12037af/e/deca9313680e6e75c29814b1?renderMode=0&uiState=651c64f535a14d2ada3c9064)
 ### Reflection
 
-What went wrong / was challenging, how'd you figure it out, and what did you learn from that experience? Your goal for the reflection is to pass on knowledge that will make this assignment better or easier for the next person. Think about your audience for this one, which may be "future you" (when you realize you need some of this code in three months), me, or your college admission committee!
 
+This assignment reminded me on how to do a lot of CAD stuff that I maybe forgot. It was pretty easy and I was almost done on friday (the day I started) and finished on monday before the bell even rang. There were some things I was confused about like the arch but other than that I remembered how to do it.
 &nbsp;
 
  

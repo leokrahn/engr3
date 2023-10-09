@@ -301,7 +301,7 @@ The goal of the assignment was to create the swing arm from the drawings in a wa
 
 ### Part Link 
 
-[](https://cvilleschools.onshape.com/documents/e57e2b944236825246ddfa70/w/32f5b939a9de66a2a0d833e2/e/c87cbfca08facb2f44d174fb)
+[link](https://cvilleschools.onshape.com/documents/e57e2b944236825246ddfa70/w/32f5b939a9de66a2a0d833e2/e/c87cbfca08facb2f44d174fb)
 
 ### Reflection
 

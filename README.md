@@ -247,10 +247,11 @@ while True:
 
 ```
 
-[***Link to my code***](https://github.com/leokrahn/engr3/blob/main/potentiometer.py)
+[***Link to my code***](https://github.com/leokrahn/engr3/blob/main/photointerrupter.py)
 
 ### Evidence
-![ezgif-5-a8eef860d4](https://github.com/leokrahn/engr3/assets/143544783/69f277ca-2558-4a82-9023-e6456f96561b)
+![Screenshot (5)](https://github.com/leokrahn/engr3/assets/143544783/c149f798-be4b-414d-89a9-eca753009bcd)
+
 Image credit goes to me
 
 ### Wiring

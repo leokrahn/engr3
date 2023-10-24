@@ -126,8 +126,7 @@ Don't just tell the reader what went wrong or was challenging!  Describe how you
 
 ## CircuitPython_Distance_Sensor
 
-The goal of the assignment was to control a servo motor using 2 buttons. The code was made in CircuitPython. First I wired a servo and got it working with a loop code. Then I wired 2 buttons and got them to talk to the Serial Moniter. Then I combined the 2 codes and added a couple things from online libraries. 
-
+The goal of this assignment was to smoothly shift the color of a neopixel based on the distance from a ultrasonic sensor
   Here is the code     
 
 ```python
@@ -136,59 +135,49 @@ The goal of the assignment was to control a servo motor using 2 buttons. The cod
 
 import time
 import board
-import pwmio
-from adafruit_motor import servo
-from digitalio import DigitalInOut, Direction, Pull
+import adafruit_hcsr04
+import neopixel
+import simpleio
 
-# create a PWMOut object on the control pin.
-pwm = pwmio.PWMOut(board.D5, duty_cycle=0, frequency=50)
+NUMPIXELS = 1  # Update this to match the number of LEDs.
+SPEED = 0.1  # Increase to slow down the rainbow. Decrease to speed it up.
+BRIGHTNESS = 0.2  # A number between 0.0 and 1.0, where 0.0 is off, and 1.0 is max.
+PIN = board.NEOPIXEL  # This is the default pin on the 5x5 NeoPixel Grid BFF.
 
-btn = DigitalInOut(board.D8)
-btn.direction = Direction.INPUT
-btn.pull = Pull.DOWN
+pixels = neopixel.NeoPixel(PIN, NUMPIXELS, brightness=BRIGHTNESS, auto_write=False)
+sonar = adafruit_hcsr04.HCSR04(trigger_pin=board.D5, echo_pin=board.D6)
+RED = (255, 0, 0)
+GREEN = (0, 255, 0)
+BLUE = (0, 0, 255)
 
-btn2 = DigitalInOut(board.D9)
-btn2.direction = Direction.INPUT
-btn2.pull = Pull.DOWN
-
-# To get the full range of the servo you will likely need to adjust the min_pulse and max_pulse to
-# match the stall points of the servo.
-# This is an example for the Sub-micro servo: https://www.adafruit.com/product/2201
-# servo = servo.Servo(pwm, min_pulse=580, max_pulse=2350)
-# This is an example for the Micro Servo - High Powered, High Torque Metal Gear:
-#   https://www.adafruit.com/product/2307
-# servo = servo.Servo(pwm, min_pulse=500, max_pulse=2600)
-# This is an example for the Standard servo - TowerPro SG-5010 - 5010:
-#   https://www.adafruit.com/product/155
-# servo = servo.Servo(pwm, min_pulse=400, max_pulse=2400)
-# This is an example for the Analog Feedback Servo: https://www.adafruit.com/product/1404
-# servo = servo.Servo(pwm, min_pulse=600, max_pulse=2500)
-# This is an example for the Micro servo - TowerPro SG-92R: https://www.adafruit.com/product/169
-# servo = servo.Servo(pwm, min_pulse=500, max_pulse=2400)
-
-# The pulse range is 750 - 2250 by default. This range typically gives 135 degrees of
-# range, but the default is to use 180 degrees. You can specify the expected range if you wish:
-# servo = servo.Servo(board.D5, actuation_range=135)
-servo = servo.Servo(pwm)
-angle = 90
-
-# We sleep in the loops to give the servo time to move into position.
 while True:
-    if btn.value:
-        angle = angle + 1
-        if angle > 180:
-            angle = 180
-        print(angle)
-        servo.angle = angle
-        time.sleep(0.01)
-        
-    if btn2.value:
-        angle = angle - 1
-        if angle < 0:
-            angle = 0
-        print(angle)
-        servo.angle = angle
-        time.sleep(0.01)
+    try:
+        print((sonar.distance))
+        time.sleep(0.1)
+        if (sonar.distance < 5):
+            pixels.fill(RED)
+            pixels.show()
+            time.sleep(0.1)
+        elif (5 < sonar.distance < 20):
+            x = simpleio.map_range((sonar.distance),5,20,0,255)
+            pixels.fill((255-x, 0, x))
+            pixels.show()
+            time.sleep(0.1)
+        elif (sonar.distance == 20):
+            pixels.fill(BLUE)
+            pixels.show()
+            time.sleep(0.1)
+        elif (20 < sonar.distance < 35):
+            x = simpleio.map_range((sonar.distance),20,35,0,255)
+            pixels.fill((0, x, 255-x))
+            pixels.show()
+            time.sleep(0.1)
+        elif (sonar.distance > 35):
+            pixels.fill(GREEN)
+            pixels.show()
+            time.sleep(0.1)
+    except RuntimeError:
+        print("Retrying!")
 
 ```
 

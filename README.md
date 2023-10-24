@@ -154,9 +154,10 @@ while True:
 **Link to my code**  
 	[Servo Code]([https://github.com/leokrahn/engr3/blob/main/servo.py](https://github.com/leokrahn/engr3/blob/main/button.py))
 ### Evidence
+![ezgif-4-ed9e11f651-min](https://github.com/leokrahn/engr3/assets/143544783/35811fc8-2ca4-4bb9-af7b-5baff87b59b1)
 
 Image credit goes to [me]
-![image](https://github.com/leokrahn/engr3/assets/143544783/6253f6da-ef98-48cc-9f57-aa89856eac40)
+
 
 ### Wiring
 Note: I'm using a metro m0 with a shield, not an arduino with a breadboard
@@ -164,7 +165,7 @@ Note: I'm using a metro m0 with a shield, not an arduino with a breadboard
 
 
 ### Reflection
-The first thing I did was wire the distance sensor and use an example code to print the distance of the sensor.
+The first thing I did was wire the distance sensor and use an example code to print the distance of the sensor. Then I made the neopixel turn red when it's less then 5 cm, and green when it's less then 35. Then I made it smoothly shift along the spectrum (I got help from a friend on this part). I learned more about circuit python from this assignment.
 
 
 

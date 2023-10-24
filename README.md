@@ -182,10 +182,11 @@ while True:
 ```
 
 **Link to my code**  
-	[Servo Code](https://github.com/leokrahn/engr3/blob/main/servo.py)
+	[Servo Code]([https://github.com/leokrahn/engr3/blob/main/servo.py](https://github.com/leokrahn/engr3/blob/main/button.py))
 ### Evidence
-![ezgif-5-a997dfd67c-min](https://github.com/leokrahn/engr3/assets/143544783/7010ea8c-76ee-4462-a460-b1fbd6a6f69b)
+
 Image credit goes to [me]
+![image](https://github.com/leokrahn/engr3/assets/143544783/6253f6da-ef98-48cc-9f57-aa89856eac40)
 
 ### Wiring
 Note: I'm using a metro m0 with a shield, not an arduino with a breadboard
@@ -193,8 +194,8 @@ Note: I'm using a metro m0 with a shield, not an arduino with a breadboard
 
 
 ### Reflection
+The first thing I did was wire the distance sensor and use an example code to print the distance of the sensor.
 
-Don't just tell the reader what went wrong or was challenging!  Describe how you figured it out, share the things that helped you succeed (tutorials, other people's repos, etc.), and then share what you learned from that experience.  **Your underlying goal for the reflection, is to concisely pass on the RIGHT knowledge that will help the reader recreate this assignment better or more easily.  Pass on your wisdom!**
 
 
 ## CircuitPython_LCD

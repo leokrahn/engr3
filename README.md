@@ -274,7 +274,7 @@ The goal of the assignment was to design the hanger in onshape from the drawing.
 
 ### Evidence
 
-Take several cropped screenshots of your Onshape document from different angles. Try to capture all important aspects of the design. Turn off overlays that obscure the parts, such as planes or mate connectors. Your images should have captions, so the reader knows what they are looking at!  
+
 ![Screenshot (9)](https://github.com/leokrahn/engr3/assets/143544783/0ee413c6-9b3d-4db5-ab07-4aa2165a8db5)
 ![Screenshot (8)](https://github.com/leokrahn/engr3/assets/143544783/32879ec6-2d21-4ef2-a492-259ffe92332e)
 ![Screenshot (7)](https://github.com/leokrahn/engr3/assets/143544783/270c770e-ed00-4abb-8283-2ddec89e2f12)

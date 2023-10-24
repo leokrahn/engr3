@@ -17,7 +17,7 @@ Write a couple sentences here, describing this assignment, and make sure that yo
   How you accomplished the goal is NOT a reflection, it is you telling the reader how to do this assignment, in broad strokes.
 
   Your description is the right place to draw the reader's attention to any important chunks of code. Here's how you make code look like code:
-
+.
 ```python
 Code goes here
 

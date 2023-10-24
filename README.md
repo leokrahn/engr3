@@ -95,6 +95,8 @@ Don't just tell the reader what went wrong or was challenging!  Describe how you
 ## CircuitPython_Distance_Sensor
 
 The goal of this assignment was to smoothly shift the color of a neopixel based on the distance from a ultrasonic sensor
+
+  
   Here is the code     
 
 ```python

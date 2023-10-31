@@ -316,7 +316,29 @@ I started by drawing the main circle and then the 2 parts that protrude from it.
 
 &nbsp;
 
- 
+ ## Single Part
+
+### Assignment Description
+
+The goal of the assignment was to create the part using the given drawing and then change the variables and other values to find the mass of the part for different questions. It's prep for our certification test.
+
+### Evidence
+![image](https://github.com/leokrahn/engr3/assets/143544783/cce72765-f10b-4a72-a894-302919e07fd4)
+![image](https://github.com/leokrahn/engr3/assets/143544783/88d6ca8a-6604-4a86-8e00-7c739a2b764e)
+![image](https://github.com/leokrahn/engr3/assets/143544783/7f21691d-5a84-4dea-ad85-ff48690395b7)
+![image](https://github.com/leokrahn/engr3/assets/143544783/37bfba2c-d972-4c92-9258-75647e1e90b0)
+
+
+### Part Link 
+
+[link](https://cvilleschools.onshape.com/documents/e57e2b944236825246ddfa70/w/32f5b939a9de66a2a0d833e2/e/c87cbfca08facb2f44d174fb)
+
+### Reflection
+
+I started by drawing the main circle and then the 2 parts that protrude from it. After finishing the sketch of the front plane I extruded everything and continued with the other extrudes, fillets, and sketches. With the variable settings of the first question, origininally my part was well within 1%, but when I changed the variables everything broke. I defined everything that wasn't defined and made it so that the end circles are defined 20mm from the edge instead of centered on the edge and that fixed mostly everything. For some reason my measurements still aren't exact but everything is within 1%.
+
+&nbsp;
+
 
  
  

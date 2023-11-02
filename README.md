@@ -323,19 +323,20 @@ I started by drawing the main circle and then the 2 parts that protrude from it.
 The goal of the assignment was to create the part using the given drawing and then change the variables and other values to find the mass of the part for different questions. It's prep for our certification test.
 
 ### Evidence
-![image](https://github.com/leokrahn/engr3/assets/143544783/cce72765-f10b-4a72-a894-302919e07fd4)
-![image](https://github.com/leokrahn/engr3/assets/143544783/88d6ca8a-6604-4a86-8e00-7c739a2b764e)
-![image](https://github.com/leokrahn/engr3/assets/143544783/7f21691d-5a84-4dea-ad85-ff48690395b7)
-![image](https://github.com/leokrahn/engr3/assets/143544783/37bfba2c-d972-4c92-9258-75647e1e90b0)
+![image](https://github.com/leokrahn/engr3/assets/143544783/a303604b-a193-42bd-b610-79463689536c)
+![image](https://github.com/leokrahn/engr3/assets/143544783/93e57ce5-466e-4b9d-aecb-c03bd1dd3c24)
+![image](https://github.com/leokrahn/engr3/assets/143544783/f5dc51d0-a7e2-4156-9733-229c312af014)
+![image](https://github.com/leokrahn/engr3/assets/143544783/10a8d8f9-8295-4aa4-a35b-09f20bfdc17d)
+![image](https://github.com/leokrahn/engr3/assets/143544783/e6aed3c8-f889-4bf3-a04c-b56cb9691a9e)
 
 
 ### Part Link 
 
-[link](https://cvilleschools.onshape.com/documents/e57e2b944236825246ddfa70/w/32f5b939a9de66a2a0d833e2/e/c87cbfca08facb2f44d174fb)
+[link](https://cvilleschools.onshape.com/documents/67a89f844e7b3bc0f27c27c0/w/a7ba080924b4764f867ba6f5/e/e3884aed1916ed9001078dfe?renderMode=0&uiState=6543f734fce0961b6edc4664)
 
 ### Reflection
 
-I started by drawing the main circle and then the 2 parts that protrude from it. After finishing the sketch of the front plane I extruded everything and continued with the other extrudes, fillets, and sketches. With the variable settings of the first question, origininally my part was well within 1%, but when I changed the variables everything broke. I defined everything that wasn't defined and made it so that the end circles are defined 20mm from the edge instead of centered on the edge and that fixed mostly everything. For some reason my measurements still aren't exact but everything is within 1%.
+This one was pretty easy I just followed the steps in the drawings and got question one done, although it wasn't right. My sketch 1 wasn't defined right so I redid it and it worked. After that everything went smoothly.
 
 &nbsp;
 

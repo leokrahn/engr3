@@ -340,7 +340,28 @@ This one was pretty easy I just followed the steps in the drawings and got quest
 
 &nbsp;
 
+ ## Multi Part
 
+### Assignment Description
+
+The goal of the assignment was to create the parts using the given drawings and then change the variables and other values to find the mass of the part for different questions. It's prep for our certification test.
+
+### Evidence
+
+
+### Part Link 
+
+[link](https://cvilleschools.onshape.com/documents/67a89f844e7b3bc0f27c27c0/w/a7ba080924b4764f867ba6f5/e/e3884aed1916ed9001078dfe?renderMode=0&uiState=6543f734fce0961b6edc4664)
+
+### Reflection
+
+This one was pretty easy I just followed the steps in the drawings and got question one done, although it wasn't right. My sketch 1 wasn't defined right so I redid it and it worked. After that everything went smoothly.
+
+&nbsp;
+
+
+ 
+ 
  
  
 

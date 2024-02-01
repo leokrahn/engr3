@@ -9,38 +9,6 @@ __
 * [NextAssignmentGoesHere](#NextAssignment)
 ---
 
-## Hello_CircuitPython
-
-### Description & Code Snippets
-Write a couple sentences here, describing this assignment, and make sure that you hit these two points:
-* What was the goal of the assignment?
-* How did you accomplish that goal?
-  How you accomplished the goal is NOT a reflection, it is you telling the reader how to do this assignment, in broad strokes.
-
-  Your description is the right place to draw the reader's attention to any important chunks of code. Here's how you make code look like code:
-.
-```python
-Code goes here
-
-```
-
-
-
-
-And here is how you should give image credit to someone if you use their work:
-
-
-
-
-
-### Wiring
-Make an account with your Google ID at [tinkercad.com](https://www.tinkercad.com/learn/circuits), and use "TinkerCad Circuits to make a wiring diagram."  It's really easy!  
-Then post an image here.   [here's a quick tutorial for all markdown code, like making links](https://guides.github.com/features/mastering-markdown/)
-
-### Reflection
-Don't just tell the reader what went wrong or was challenging!  Describe how you figured it out, share the things that helped you succeed (tutorials, other people's repos, etc.), and then share what you learned from that experience.  **Your underlying goal for the reflection, is to concisely pass on the RIGHT knowledge that will help the reader recreate this assignment better or more easily.  Pass on your wisdom!**
-
-
 
 ## CircuitPython_Servo
 
@@ -126,8 +94,9 @@ Don't just tell the reader what went wrong or was challenging!  Describe how you
 
 ## CircuitPython_Distance_Sensor
 
-The goal of the assignment was to control a servo motor using 2 buttons. The code was made in CircuitPython. First I wired a servo and got it working with a loop code. Then I wired 2 buttons and got them to talk to the Serial Moniter. Then I combined the 2 codes and added a couple things from online libraries. 
+The goal of this assignment was to smoothly shift the color of a neopixel based on the distance from a ultrasonic sensor
 
+  
   Here is the code     
 
 ```python
@@ -136,67 +105,59 @@ The goal of the assignment was to control a servo motor using 2 buttons. The cod
 
 import time
 import board
-import pwmio
-from adafruit_motor import servo
-from digitalio import DigitalInOut, Direction, Pull
+import adafruit_hcsr04
+import neopixel
+import simpleio
 
-# create a PWMOut object on the control pin.
-pwm = pwmio.PWMOut(board.D5, duty_cycle=0, frequency=50)
+NUMPIXELS = 1  # Update this to match the number of LEDs.
+SPEED = 0.1  # Increase to slow down the rainbow. Decrease to speed it up.
+BRIGHTNESS = 0.2  # A number between 0.0 and 1.0, where 0.0 is off, and 1.0 is max.
+PIN = board.NEOPIXEL  # This is the default pin on the 5x5 NeoPixel Grid BFF.
 
-btn = DigitalInOut(board.D8)
-btn.direction = Direction.INPUT
-btn.pull = Pull.DOWN
+pixels = neopixel.NeoPixel(PIN, NUMPIXELS, brightness=BRIGHTNESS, auto_write=False)
+sonar = adafruit_hcsr04.HCSR04(trigger_pin=board.D5, echo_pin=board.D6)
+RED = (255, 0, 0)
+GREEN = (0, 255, 0)
+BLUE = (0, 0, 255)
 
-btn2 = DigitalInOut(board.D9)
-btn2.direction = Direction.INPUT
-btn2.pull = Pull.DOWN
-
-# To get the full range of the servo you will likely need to adjust the min_pulse and max_pulse to
-# match the stall points of the servo.
-# This is an example for the Sub-micro servo: https://www.adafruit.com/product/2201
-# servo = servo.Servo(pwm, min_pulse=580, max_pulse=2350)
-# This is an example for the Micro Servo - High Powered, High Torque Metal Gear:
-#   https://www.adafruit.com/product/2307
-# servo = servo.Servo(pwm, min_pulse=500, max_pulse=2600)
-# This is an example for the Standard servo - TowerPro SG-5010 - 5010:
-#   https://www.adafruit.com/product/155
-# servo = servo.Servo(pwm, min_pulse=400, max_pulse=2400)
-# This is an example for the Analog Feedback Servo: https://www.adafruit.com/product/1404
-# servo = servo.Servo(pwm, min_pulse=600, max_pulse=2500)
-# This is an example for the Micro servo - TowerPro SG-92R: https://www.adafruit.com/product/169
-# servo = servo.Servo(pwm, min_pulse=500, max_pulse=2400)
-
-# The pulse range is 750 - 2250 by default. This range typically gives 135 degrees of
-# range, but the default is to use 180 degrees. You can specify the expected range if you wish:
-# servo = servo.Servo(board.D5, actuation_range=135)
-servo = servo.Servo(pwm)
-angle = 90
-
-# We sleep in the loops to give the servo time to move into position.
 while True:
-    if btn.value:
-        angle = angle + 1
-        if angle > 180:
-            angle = 180
-        print(angle)
-        servo.angle = angle
-        time.sleep(0.01)
-        
-    if btn2.value:
-        angle = angle - 1
-        if angle < 0:
-            angle = 0
-        print(angle)
-        servo.angle = angle
-        time.sleep(0.01)
+    try:
+        print((sonar.distance))
+        time.sleep(0.1)
+        if (sonar.distance < 5):
+            pixels.fill(RED)
+            pixels.show()
+            time.sleep(0.1)
+        elif (5 < sonar.distance < 20):
+            x = simpleio.map_range((sonar.distance),5,20,0,255)
+            pixels.fill((255-x, 0, x))
+            pixels.show()
+            time.sleep(0.1)
+        elif (sonar.distance == 20):
+            pixels.fill(BLUE)
+            pixels.show()
+            time.sleep(0.1)
+        elif (20 < sonar.distance < 35):
+            x = simpleio.map_range((sonar.distance),20,35,0,255)
+            pixels.fill((0, x, 255-x))
+            pixels.show()
+            time.sleep(0.1)
+        elif (sonar.distance > 35):
+            pixels.fill(GREEN)
+            pixels.show()
+            time.sleep(0.1)
+    except RuntimeError:
+        print("Retrying!")
 
 ```
 
 **Link to my code**  
-	[Servo Code](https://github.com/leokrahn/engr3/blob/main/servo.py)
+	[Servo Code]([https://github.com/leokrahn/engr3/blob/main/servo.py](https://github.com/leokrahn/engr3/blob/main/button.py))
 ### Evidence
-![ezgif-5-a997dfd67c-min](https://github.com/leokrahn/engr3/assets/143544783/7010ea8c-76ee-4462-a460-b1fbd6a6f69b)
+![ezgif-4-ed9e11f651-min](https://github.com/leokrahn/engr3/assets/143544783/35811fc8-2ca4-4bb9-af7b-5baff87b59b1)
+
 Image credit goes to [me]
+
 
 ### Wiring
 Note: I'm using a metro m0 with a shield, not an arduino with a breadboard
@@ -204,47 +165,8 @@ Note: I'm using a metro m0 with a shield, not an arduino with a breadboard
 
 
 ### Reflection
+The first thing I did was wire the distance sensor and use an example code to print the distance of the sensor. Then I made the neopixel turn red when it's less then 5 cm, and green when it's less then 35. Then I made it smoothly shift along the spectrum (I got help from a friend on this part). I learned more about circuit python from this assignment.
 
-Don't just tell the reader what went wrong or was challenging!  Describe how you figured it out, share the things that helped you succeed (tutorials, other people's repos, etc.), and then share what you learned from that experience.  **Your underlying goal for the reflection, is to concisely pass on the RIGHT knowledge that will help the reader recreate this assignment better or more easily.  Pass on your wisdom!**
-
-
-## CircuitPython_LCD
-
-### Description & Code Snippets
-Write a couple sentences here, describing this assignment, and make sure that you hit these two points:
-* What was the goal of the assignment?
-* How did you accomplish that goal?
-  How you accomplished the goal is NOT a reflection, it is you telling the reader how to do this assignment, in broad strokes.
-
-  Your description is the right place to draw the reader's attention to any important chunks of code. Here's how you make code look like code:
-
-```python
-Code goes here
-
-```
-
-**Lastly, please end this section with a link to your code or file.**  
-
-
-### Evidence
-Pictures / Gifs of your finished work should go here.  You need to communicate what your thing does.
-For making a GIF, I recommend [ezgif.com](https://www.ezgif.com) Remember you can insert pictures using Markdown or HTML to insert an image.
-
-
-And here is how you should give image credit to someone if you use their work:
-
-Image credit goes to [Rick A](https://www.youtube.com/watch?v=dQw4w9WgXcQ&scrlybrkr=8931d0bc)
-
-
-
-### Wiring
-[tinkercad.com](https://www.tinkercad.com/learn/circuits).  If you can't find the particular part you need, get creative, and just drop a note into the circuit diagram, explaining.
-For example, I use an Arduino Uno to represent my Circuitpython device but write a note saying which board I'm actually using.
-Then post an image here.   [Here's a quick tutorial for all markdown code, like making links](https://guides.github.com/features/mastering-markdown/)
-
-
-### Reflection
-Don't just tell the reader what went wrong or was challenging!  Describe how you figured it out, share the things that helped you succeed (tutorials, other people's repos, etc.), and then share what you learned from that experience.  **Your underlying goal for the reflection, is to concisely pass on the RIGHT knowledge that will help the reader recreate this assignment better or more easily.  Pass on your wisdom!**
 
 
 
@@ -353,7 +275,7 @@ The goal of the assignment was to design the hanger in onshape from the drawing.
 
 ### Evidence
 
-Take several cropped screenshots of your Onshape document from different angles. Try to capture all important aspects of the design. Turn off overlays that obscure the parts, such as planes or mate connectors. Your images should have captions, so the reader knows what they are looking at!  
+
 ![Screenshot (9)](https://github.com/leokrahn/engr3/assets/143544783/0ee413c6-9b3d-4db5-ab07-4aa2165a8db5)
 ![Screenshot (8)](https://github.com/leokrahn/engr3/assets/143544783/32879ec6-2d21-4ef2-a492-259ffe92332e)
 ![Screenshot (7)](https://github.com/leokrahn/engr3/assets/143544783/270c770e-ed00-4abb-8283-2ddec89e2f12)
@@ -394,6 +316,7 @@ I started by drawing the main circle and then the 2 parts that protrude from it.
 
 &nbsp;
 
+<<<<<<< HEAD
 ## Rotary Encoder & LCD
 
 ### Description & Code Snippets
@@ -459,7 +382,54 @@ Image credit goes to me
 
 
  
+=======
+ ## Single Part
 
+### Assignment Description
+
+The goal of the assignment was to create the part using the given drawing and then change the variables and other values to find the mass of the part for different questions. It's prep for our certification test.
+
+### Evidence
+![image](https://github.com/leokrahn/engr3/assets/143544783/a303604b-a193-42bd-b610-79463689536c)
+![image](https://github.com/leokrahn/engr3/assets/143544783/93e57ce5-466e-4b9d-aecb-c03bd1dd3c24)
+![image](https://github.com/leokrahn/engr3/assets/143544783/f5dc51d0-a7e2-4156-9733-229c312af014)
+![image](https://github.com/leokrahn/engr3/assets/143544783/10a8d8f9-8295-4aa4-a35b-09f20bfdc17d)
+![image](https://github.com/leokrahn/engr3/assets/143544783/e6aed3c8-f889-4bf3-a04c-b56cb9691a9e)
+
+
+### Part Link 
+>>>>>>> b2c6691c70b55c8fec7cb572825c5b9739ec4550
+
+[link](https://cvilleschools.onshape.com/documents/67a89f844e7b3bc0f27c27c0/w/a7ba080924b4764f867ba6f5/e/e3884aed1916ed9001078dfe?renderMode=0&uiState=6543f734fce0961b6edc4664)
+
+### Reflection
+
+This one was pretty easy I just followed the steps in the drawings and got question one done, although it wasn't right. My sketch 1 wasn't defined right so I redid it and it worked. After that everything went smoothly.
+
+&nbsp;
+
+ ## Multi Part
+
+### Assignment Description
+
+The goal of the assignment was to create the parts using the given drawings and then change the variables and other values to find the mass of the part for different questions. It's prep for our certification test.
+
+### Evidence
+
+
+### Part Link 
+
+[link](https://cvilleschools.onshape.com/documents/67a89f844e7b3bc0f27c27c0/w/a7ba080924b4764f867ba6f5/e/e3884aed1916ed9001078dfe?renderMode=0&uiState=6543f734fce0961b6edc4664)
+
+### Reflection
+
+This one was pretty easy I just followed the steps in the drawings and got question one done, although it wasn't right. My sketch 1 wasn't defined right so I redid it and it worked. After that everything went smoothly.
+
+&nbsp;
+
+
+ 
+ 
  
  
 

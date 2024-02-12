@@ -377,9 +377,10 @@ Image credit goes to me
 
 ### Wiring
 
+![Screenshot 2024-02-08 152518](https://github.com/leokrahn/engr3/assets/143544783/952c1820-80b0-4a25-a717-f9a15bb208ba)
 
 ### Reflection
-
+the assign ment was pretty easy, i followed the instructions on the slides for both the wiring and the first part of the code, and then did the rest on my own.
 
  
 =======

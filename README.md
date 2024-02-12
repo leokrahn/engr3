@@ -384,6 +384,15 @@ the assign ment was pretty easy, i followed the instructions on the slides for b
 
  
 =======
+ ## IR Sensor
+
+### Assignment Description
+
+The goal of the assigment was to use an IR sensor to decide if there is an object close to it or not, and then to change the color of an LCD based on that.
+
+### Evidence
+
+
  ## Single Part
 
 ### Assignment Description

@@ -373,7 +373,7 @@ while True:
 ### Evidence
 
 
-Image credit goes to me
+i unplugged it and forgot to record
 
 ### Wiring
 

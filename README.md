@@ -386,12 +386,39 @@ the assign ment was pretty easy, i followed the instructions on the slides for b
 =======
  ## IR Sensor
 
-### Assignment Description
+### Description & Code Snippets
 
 The goal of the assigment was to use an IR sensor to decide if there is an object close to it or not, and then to change the color of an LCD based on that.
 
-### Evidence
+Here is the code
+```python
+import board
+import neopixel
+import digitalio
 
+ir_sensor = digitalio.DigitalInOut(board.D2)
+ir_sensor.direction = digitalio.Direction.INPUT
+ir_sensor.pull = digitalio.Pull.UP
+
+led = neopixel.NeoPixel(board.NEOPIXEL, 1)
+led.brightness = 0.3
+
+while True:
+    if ir_sensor.value:
+        print("not close")
+        led[0] = (255, 0, 0)
+    if not ir_sensor.value:
+        print("close")
+        led[0] = (0, 255, 0)
+```
+### Evidence
+![ezgif-6-98ac4fb2bd](https://github.com/leokrahn/engr3/assets/143544783/531213c2-3866-4fe4-964d-4a492b0e0ec2)
+
+
+### Wiring
+![Screenshot 2024-02-13 143208](https://github.com/leokrahn/engr3/assets/143544783/e4ce5ba9-f68d-4b90-8a00-2bce66e01d55)
+
+### Reflection
 
  ## Single Part
 

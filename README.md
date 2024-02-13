@@ -419,7 +419,7 @@ while True:
 ![Screenshot 2024-02-13 143208](https://github.com/leokrahn/engr3/assets/143544783/e4ce5ba9-f68d-4b90-8a00-2bce66e01d55)
 
 ### Reflection
-
+The wiring was obvious so I did that first and then started following the slideshow for most of the code. The final part I got stuck for a little but I looked through old code assignments to figure it out.
  ## Single Part
 
 ### Assignment Description

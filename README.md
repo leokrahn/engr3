@@ -420,6 +420,81 @@ while True:
 
 ### Reflection
 The wiring was obvious so I did that first and then started following the slideshow for most of the code. The final part I got stuck for a little but I looked through old code assignments to figure it out.
+ ## Stepper Motors & Limit Switch
+### Description and Code Snippets
+
+The goal of this assignment was to use a limit switch to control a stepper motor so that the motor continually spins, and reverses briefly when you press the switch.
+
+Here is the code
+```python
+import asyncio
+import board
+import keypad
+import time
+import digitalio
+from adafruit_motor import stepper
+
+DELAY = 0.01
+STEPS = 100
+
+coils = (
+    digitalio.DigitalInOut(board.D9), #A!
+    digitalio.DigitalInOut(board.D10), #A2
+    digitalio.DigitalInOut(board.D11), #B1
+    digitalio.DigitalInOut(board.D12), #B2
+)
+
+for coil in coils:
+    coil.direction = digitalio.Direction.OUTPUT
+    
+motor = stepper.StepperMotor(coils[0], coils[1], coils[2], coils[3], microsteps=None)
+
+for step in range(STEPS):
+    motor.onestep(style=stepper.DOUBLE)
+    time.sleep(DELAY)
+
+for step in range(STEPS):
+    motor.onestep(direction=stepper.BACKWARD, style=stepper.DOUBLE)
+    time.sleep(DELAY)
+
+async def catch_pin_transitions(pin):
+    # Print a message when pin goes low and when it goes high.
+    with keypad.Keys((pin,), value_when_pressed=False) as keys:
+        while True:
+            event = keys.events.get()
+            if event:
+                if event.pressed:
+                    print("Limit Switch was pressed.")
+                    for step in range(STEPS):
+                        motor.onestep(direction=stepper.BACKWARD)
+                        time.sleep(DELAY)
+                elif event.released:
+                    print("Limit Switch was released.")
+
+            await asyncio.sleep(0)
+
+async def run_motor():
+    while(True):
+        for step in range(STEPS):
+            motor.onestep()
+            time.sleep(DELAY)
+        await asyncio.sleep(0)
+
+async def main():
+    interrupt_task = asyncio.create_task(catch_pin_transitions(board.D2))
+
+    motor_task = asyncio.create_task(run_motor())
+    await asyncio.gather(interrupt_task)
+
+asyncio.run(main())
+```
+
+### Evidence
+![ezgif-3-055fb318dc](https://github.com/leokrahn/engr3/assets/143544783/1c851b95-d796-4a17-9105-6075890ab432)
+
+### Wiring
+![Screenshot 2024-02-20 144958](https://github.com/leokrahn/engr3/assets/143544783/9319e1d9-c74d-4366-b751-fd1fa094c3fb)
+
  ## Single Part
 
 ### Assignment Description

@@ -539,7 +539,26 @@ This one was pretty easy I just followed the steps in the drawings and got quest
 
 &nbsp;
 
+ ## Robot gripper
 
+### Assignment Description
+
+The goal of the assignment was to make a robot gripper in onshape and animate it.
+
+### Evidence
+![ezgif-7-b2c5aaedee](https://github.com/leokrahn/engr3/assets/143544783/16b62d07-00a6-4fff-901c-5b37325515bf)
+![Screenshot 2024-03-04 152948](https://github.com/leokrahn/engr3/assets/143544783/bf6b479b-6c05-4a8b-b68b-ddbcf2b29809)
+
+### Part Link 
+>>>>>>> b2c6691c70b55c8fec7cb572825c5b9739ec4550
+
+[link](https://cvilleschools.onshape.com/documents/d7fce35cd364549cedf687c6/w/ec2bc0f2931aebb817e0e55b/e/fe40fcb2fa841ed0304e27cc)
+
+### Reflection
+
+For this assignment I took inspiration from the example and made a similar design. I also got help from my classmate. 
+
+&nbsp;
  
  
  

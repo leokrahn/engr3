@@ -527,6 +527,7 @@ This one was pretty easy I just followed the steps in the drawings and got quest
 The goal of the assignment was to create the parts using the given drawings and then change the variables and other values to find the mass of the part for different questions. It's prep for our certification test.
 
 ### Evidence
+![Screenshot 2024-03-25 151345](https://github.com/leokrahn/engr3/assets/143544783/9198ca63-5b54-477e-a80e-fb7bc4f61d49)
 
 
 ### Part Link 

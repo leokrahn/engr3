@@ -540,6 +540,26 @@ This one was pretty easy I just followed the steps in the drawings and got quest
 
 &nbsp;
 
+ ## Mic Stand
+
+### Assignment Description
+
+This was multi part practice assignment for the certification exam where you had to create the parts using the given drawings.
+
+### Evidence
+![Screenshot 2024-03-25 154022](https://github.com/leokrahn/engr3/assets/143544783/8f05be9e-3f0f-4c24-ac9e-a8f9c91b6292)
+
+
+
+### Part Link 
+
+[link](https://cvilleschools.onshape.com/documents/01d1da9243e1f143c9256174/w/a32e6cf67fb014620bcc626e/e/fe8e5b58cfbce666d5279b72)
+### Reflection
+
+The mic stand was pretty easy I spent the most time on the first question but I just followed the drawings and changes the values and got it done.
+
+&nbsp;
+
  ## Assemblies
 
 ### Assignment Description

@@ -540,6 +540,27 @@ This one was pretty easy I just followed the steps in the drawings and got quest
 
 &nbsp;
 
+ ## Assemblies
+
+### Assignment Description
+
+For this assignment there were already made parts in onshape and the goal was to assemble them so that the pliers work properly and answer the questions on canvas.
+
+### Evidence
+
+![ezgif-3-36ffbde276](https://github.com/leokrahn/engr3/assets/143544783/04ccd679-f9d5-406e-8f23-c21e6643fc9c)
+
+
+### Part Link 
+
+[link](https://cvilleschools.onshape.com/documents/d77f64b8d9c70d3b1ccb3665/w/6ace413eee81a368e0fa0a50/e/c128dfcb7127ef76f9353c90)
+
+### Reflection
+
+Tbh I don't remember exactly what I did for this assignment but I think I just added the proper mates to all the right parts and it worked fine. 
+
+&nbsp;
+
  ## Robot gripper
 
 ### Assignment Description

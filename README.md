@@ -380,7 +380,7 @@ while True:
 ![Screenshot 2024-02-08 152518](https://github.com/leokrahn/engr3/assets/143544783/952c1820-80b0-4a25-a717-f9a15bb208ba)
 
 ### Reflection
-the assign ment was pretty easy, i followed the instructions on the slides for both the wiring and the first part of the code, and then did the rest on my own.
+the assign ment was pretty easy, i followed the instructions on the slides for both the wiring and the first part of the code, and then did the rest on my own. I learned how to scan the LCD screen and use the menu functions.
 
  
 =======
@@ -519,15 +519,15 @@ The goal of the assignment was to create the part using the given drawing and th
 
 ### Reflection
 
-This one was pretty easy I just followed the steps in the drawings and got question one done, although it wasn't right. My sketch 1 wasn't defined right so I redid it and it worked. After that everything went smoothly.
+This one was pretty easy I just followed the steps in the drawings and got question one done, although it wasn't right. My sketch 1 wasn't defined right so I redid it and it worked. After that everything went smoothly. I learned the general structure of the certification questions and how to answer them.
 
 &nbsp;
 
- ## Multi Part
+ ## Multi Part Cylinder
 
 ### Assignment Description
 
-The goal of the assignment was to create the parts using the given drawings and then change the variables and other values to find the mass of the part for different questions. It's prep for our certification test.
+The goal of the assignment was to create the parts using the given drawings and then change the variables and other values to find the mass of the part for different questions. It's prep for our certification test. I learned how to use the boolean tool.
 
 ### Evidence
 ![Screenshot 2024-03-25 151345](https://github.com/leokrahn/engr3/assets/143544783/9198ca63-5b54-477e-a80e-fb7bc4f61d49)
@@ -559,7 +559,7 @@ This was multi part practice assignment for the certification exam where you had
 [link](https://cvilleschools.onshape.com/documents/01d1da9243e1f143c9256174/w/a32e6cf67fb014620bcc626e/e/fe8e5b58cfbce666d5279b72)
 ### Reflection
 
-The mic stand was pretty easy I spent the most time on the first question but I just followed the drawings and changes the values and got it done.
+The mic stand was pretty easy I spent the most time on the first question but I just followed the drawings and changes the values and got it done. I learned how to make lines remain equidistant and parallel when on a curve.
 
 &nbsp;
 
@@ -580,7 +580,7 @@ For this assignment there were already made parts in onshape and the goal was to
 
 ### Reflection
 
-Tbh I don't remember exactly what I did for this assignment but I think I just added the proper mates to all the right parts and it worked fine. 
+Starting this assignment I didn't really know how to mate these all right but I got help from my classmate and figured it out. I learned how to mate things together properly following drawings and answering the questions right.
 
 &nbsp;
 
@@ -601,7 +601,7 @@ The goal of the assignment was to make a robot gripper in onshape and animate it
 
 ### Reflection
 
-For this assignment I took inspiration from the example and made a similar design. I also got help from my classmate. 
+For this assignment I took inspiration from the example and made a similar design. I also got help from my classmate. I learned how to use the replicate tool.
 
 &nbsp;
  

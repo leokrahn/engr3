@@ -372,8 +372,8 @@ while True:
 
 ### Evidence
 
+![ezgif-6-f989b1b6f1](https://github.com/leokrahn/engr3/assets/143544783/6b319e0c-8a11-4856-9a2c-b6cffbdf08c7)
 
-i unplugged it and forgot to record
 
 ### Wiring
 

@@ -495,6 +495,9 @@ asyncio.run(main())
 ### Wiring
 ![Screenshot 2024-02-20 144958](https://github.com/leokrahn/engr3/assets/143544783/9319e1d9-c74d-4366-b751-fd1fa094c3fb)
 
+### Reflection
+This assignment was kinda difficult figuring the code out, but I figured it out and the wiring was pretty easy. I learned how to use limit swithces and the asyncio function
+
  ## Single Part
 
 ### Assignment Description
